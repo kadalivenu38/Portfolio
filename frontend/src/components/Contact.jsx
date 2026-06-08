@@ -36,7 +36,7 @@ export default function Contact() {
             }
         } catch (error) {
             console.error("Contact submit error", error);
-            setResult("Server error. Please check your backend or try again later.");
+            setResult("Server error. Try again later.");
         } finally {
             setIsSubmitting(false);
         }
@@ -80,14 +80,16 @@ export default function Contact() {
                     name="message"
                     rows="6"
                     placeholder="Enter your message"
-                    className="w-full px-4 py-2 focus:ring-1 outline-none border border-gray-300 dark:border-white/30 rounded-md bg-white mb-6 dark:bg-darkHover/30"
+                    className="w-full px-4 py-2 focus:ring-1 outline-none border border-gray-300 dark:border-white/30 rounded-md
+                     bg-white mb-6 dark:bg-darkHover/30" style={{fontSize: '15px', wordSpacing: '2px'}}
                     required
                 />
 
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="py-2 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border dark:border-white/30 dark:hover:bg-darkHover disabled:cursor-not-allowed disabled:opacity-60"
+                    className="py-2 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto
+                     hover:bg-black duration-500 dark:bg-transparent dark:border dark:border-white/30 dark:hover:bg-darkHover disabled:cursor-not-allowed disabled:opacity-60"
                 >
                     {isSubmitting ? "Sending..." : "Submit now"}
                     <img src="./assets/right-arrow-white.png" alt="Submit" className="w-4" />

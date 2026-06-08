@@ -3,25 +3,25 @@ export default function Projects() {
     const projects = [
         {
             name: 'Authentication system',
-            icon: './assets/work-1.png',
+            icon: './assets/Authentication-project.png',
             description: 'Authentication functionality of real-world applications',
             link: 'https://github.com/kadalivenu38/auth-system',
         },
         {
             name: 'Quick GPT',
-            icon: './assets/work-2.png',
+            icon: './assets/quick-gpt-project.png',
             description: 'Web based Chat application built using MERN and Gemini API',
             link: 'https://chat-web-application-frontend.vercel.app/',
         },
         {
             name: 'Resume Builder',
-            icon: './assets/work-3.png',
+            icon: './assets/resume-builder-project.png',
             description: 'AI powered Resume building web application by using Gemini API',
             link: 'https://github.com/kadalivenu38/AI-Resume-Builder',
         },
         {
             name: 'Poster Generator',
-            icon: './assets/work-4.png',
+            icon: './assets/poster-generator-project.png',
             description: 'AI based poster generating web application using python, streamlit',
             link: 'https://ai-poster-generator-9wzuvpeychuqnhldbvh7s2.streamlit.app/',
         }
@@ -35,34 +35,38 @@ export default function Projects() {
                 <style>{`
                     .no-scrollbar::-webkit-scrollbar { display: none; }
                     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+                    /* Mobile: stacked full-width cards */
                     .project-card {
                         width: 100%;
-                        max-width: 160px;
+                        max-width: 100%;
                     }
+
+                    /* Larger screens: limit card width for horizontal carousel */
                     @media (min-width: 640px) {
-                        .project-card { max-width: 220px; }
-                    }
-                    @media (min-width: 768px) {
                         .project-card { max-width: 260px; }
                     }
-                    @media (min-width: 1024px) {
+                    @media (min-width: 768px) {
                         .project-card { max-width: 300px; }
                     }
+                    @media (min-width: 1024px) {
+                        .project-card { max-width: 350px; }
+                    }
                     @media (min-width: 1280px) {
-                        .project-card { max-width: 360px; }
+                        .project-card { max-width: 380px; }
                     }
                 `}</style>
-                <div className="flex gap-4 overflow-x-auto py-3 px-2 snap-x snap-mandatory no-scrollbar">
+                <div className="flex flex-col md:flex-row gap-4 md:overflow-x-auto py-3 px-2 md:snap-x md:snap-mandatory no-scrollbar">
                     {projects.map((project, idx) => (
                         <a
                             key={idx}
                             href={project.link}
                             target="_blank"
-                            className="project-card snap-start p-2 bg-white border border-gray-200 hover:-translate-y-2 transition-transform duration-300
-                             rounded-lg shadow shadow-black/10 flex-shrink-0 dark:bg-darkHover dark:border-white/10 dark:hover:border-white/50"
+                            className="project-card md:snap-start p-2 bg-white border border-gray-200 hover:-translate-y-2 transition-transform duration-300
+                             rounded-lg shadow shadow-black/10 md:flex-shrink-0 dark:bg-darkHover dark:border-white/10 dark:hover:border-white/50"
                         >
-                            <div className="h-44 overflow-hidden rounded-md bg-slate-100 dark:bg-slate-900">
-                                <img className="w-full h-full object-cover" src={project.icon} alt={project.name} />
+                            <div className="h-48 overflow-hidden rounded-md bg-slate-100 dark:bg-slate-900">
+                                <img className="w-full h-full object-fill" src={project.icon} alt={project.name} />
                             </div>
                             <div>
                                 <p className="text-gray-900 text-md font-semibold dark:text-white">{project.name}</p>

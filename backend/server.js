@@ -9,7 +9,7 @@ const app = express();
 await dbConn();
 
 // middlewares
-app.use(cors({ origin: "*" }));
+app.use(cors({ origin: "https://kadalivenu-portfolio.vercel.app" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
