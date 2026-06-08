@@ -2,6 +2,10 @@
 
 This repository contains a personal portfolio web application with a React + Vite frontend and an Express + MongoDB backend. The site showcases projects, skills, and includes a contact form that saves messages to MongoDB.
 
+## Live Link
+
+https://kadalivenu-portfolio.vercel.app/
+
 **Repository structure**
 
 - `frontend/` — React (Vite) frontend source and build config
@@ -108,4 +112,3 @@ This project is provided under the MIT License. See `LICENSE` if present.
 **Contact**
 
 If you need help running the project locally or want to report a bug, open an issue or contact the repository owner.
-
