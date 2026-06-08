@@ -1,6 +1,6 @@
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Work from './components/Work'
+import Projects from './components/Projects'
 import Skills from './components/Skills'
 import About from './components/About'
 import Header from './components/Header'
@@ -15,7 +15,7 @@ export default function App() {
             <Header />
             <About />
             <Skills />
-            <Work />
+            <Projects />
             <Contact />
             <Footer />
         </>

@@ -46,11 +46,11 @@ const Skills = () => {
             <div className="flex flex-col items-center justify-center gap-3 px-6 py-4 min-w-max">
                 <div className="relative group">
                     <div className="absolute inset-0 bg-gradient-to-r from-[#b820e6] to-[#da7d20] rounded-xl blur-lg opacity-0 group-hover:opacity-75 transition duration-300" />
-                    <div className="relative bg-white dark:bg-darkHover border border-gray-200 dark:border-white/10 rounded-xl p-2 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg dark:group-hover:shadow-purple-500/20">
+                    <div className="relative bg-white dark:bg-darkHover border border-gray-200 dark:border-white/10 rounded-xl p-2 transition-all duration-300 group-hover:scale-90 group-hover:shadow-md dark:group-hover:shadow-purple-500/20">
                         <IconComponent size={40} color={skill.color} />
                     </div>
                 </div>
-                <span className="text-sm font-semibold text-gray-700 dark:text-gray-200 whitespace-nowrap">
+                <span className="text-sm font-Outfit text-gray-700 dark:text-gray-200 whitespace-nowrap">
                     {skill.name}
                 </span>
             </div>
@@ -100,7 +100,7 @@ const Skills = () => {
                     {/* Skills Row 1 - Scroll Right */}
                     <div className="mb-5">
                         <div className="overflow-hidden relative scroll-track">
-                            <div className="absolute left-0 top-0 h-full w-20 lg:w-40 z-10 pointer-events-none bg-gradient-to-r from-white dark:from-dark to-transparent" />
+                            <div className="absolute left-0 top-0 h-full w-20 lg:w-40 z-10 pointer-events-none bg-gradient-to-r from-white dark:from-slate-950 to-transparent" />
                             <div className="scroll-right flex gap-4 w-max">
                                 {/* First Set */}
                                 {skillsRow1.map((skill, index) => (
@@ -111,14 +111,14 @@ const Skills = () => {
                                     <SkillCard key={`row1-second-${index}`} skill={skill} />
                                 ))}
                             </div>
-                            <div className="absolute right-0 top-0 h-full w-20 lg:w-40 z-10 pointer-events-none bg-gradient-to-l from-white dark:from-dark to-transparent" />
+                            <div className="absolute right-0 top-0 h-full w-20 lg:w-40 z-10 pointer-events-none bg-gradient-to-l from-white dark:from-slate-950 to-transparent" />
                         </div>
                     </div>
 
                     {/* Skills Row 2 - Scroll Left */}
                     <div>
                         <div className="overflow-hidden relative scroll-track">
-                            <div className="absolute left-0 top-0 h-full w-20 lg:w-40 z-10 pointer-events-none bg-gradient-to-r from-white dark:from-dark to-transparent" />
+                            <div className="absolute left-0 top-0 h-full w-20 lg:w-40 z-10 pointer-events-none bg-gradient-to-r from-white dark:from-slate-950 to-transparent" />
                             <div className="scroll-left flex gap-4 w-max">
                                 {/* First Set */}
                                 {skillsRow2.map((skill, index) => (
@@ -129,7 +129,7 @@ const Skills = () => {
                                     <SkillCard key={`row2-second-${index}`} skill={skill} />
                                 ))}
                             </div>
-                            <div className="absolute right-0 top-0 h-full w-20 lg:w-40 z-10 pointer-events-none bg-gradient-to-l from-white dark:from-dark to-transparent" />
+                            <div className="absolute right-0 top-0 h-full w-20 lg:w-40 z-10 pointer-events-none bg-gradient-to-l from-white dark:from-slate-950 to-transparent" />
                         </div>
                     </div>
                 </div>
