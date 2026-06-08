@@ -3,7 +3,7 @@ import { useState } from 'react'
 export default function Contact() {
     const [result, setResult] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const backendUrl = "http://localhost:4000/contact";
+    const backendUrl = "https://portfolio-backend-60cp.onrender.com/contact";
 
     const onSubmit = async (event) => {
         event.preventDefault();
